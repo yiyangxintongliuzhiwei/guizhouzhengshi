@@ -1,0 +1,37 @@
+.a1 {
+  position: absolute;
+  width: 4800px;
+  height: 1200px;
+  background-size: 100% 100%;
+  background-image: url("../img/bg.png");
+  font-family: 'Microsoft YaHei';
+  /**滚动条样式--chrome*/
+  /*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 8px;
+    background-color: transparent;
+  }
+  /*定义滚动条轨道 内阴影+圆角*/
+  ::-webkit-scrollbar-track {
+    //-webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
+    border-radius: 2px;
+    border: none;
+  }
+  /*定义滑块 内阴影+圆角*/
+  ::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    //-webkit-box-shadow: inset 0 0 4px rgba(1, 138, 219, .2);
+    background-color: #277EF8;
+  }
+}
+
+@font-face {
+  font-family: 'trends';
+  src: url('../../../../../assets/fonts/trends.ttf');
+}
+
+@font-face {
+  font-family: 'MF_LangQian';
+  src: url('../../../../../assets/fonts/MF_LangQian.otf');
+}

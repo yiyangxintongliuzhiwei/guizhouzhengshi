@@ -1,0 +1,14 @@
+$font-family: "Microsoft Yahei", "微软雅黑";
+
+// 轮播圆圈 eg: @include loop-circle(true)
+@mixin loop-circle($boolean: true) {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  box-shadow: -2px 4px 8px rgba(7, 17, 27, 0.8);
+  @if $boolean {
+    background-color: #33DDFF;
+  } @else {
+    background-color: rgba(51, 221, 255, 0.4);
+  }
+}

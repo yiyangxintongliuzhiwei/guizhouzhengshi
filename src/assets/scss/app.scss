@@ -1,0 +1,90 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+#app,
+#popup {
+  font-family: "Microsoft Yahei", "微软雅黑";
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  div {
+    box-sizing: border-box;
+  }
+}
+
+.app,
+#popup {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+.view {
+  position: absolute;
+}
+
+.view-action {
+  border-radius: 1%;
+  box-shadow: inset 0px 0px 60px #FF2C2B;
+  background-color: rgba(255,44,43, 0.1);
+  animation-name: module-active-scale;
+  animation-duration: 1000ms;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  @keyframes module-active-scale {
+    from {
+      transform:none;
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    to {
+      transform: none;
+    }
+  }
+  >span{
+    background: rgba(0,0,0,0) !important;
+  }
+}
+
+// 高斯模糊
+.gaussian {
+  filter: blur(4px);
+  animation: gaussian 1s linear;
+  @keyframes gaussian {
+    0%{
+      filter: blur(0px);
+    }
+    100% {
+      filter: blur(4px);
+    }
+  }
+}
+
+// 弹窗
+.popup {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color:rgba(0, 0, 0, 0.8);
+  z-index: 2000
+}
+
+.popup-active {
+  display: flex;
+}
+
+.slide-up-leave-active,
+.slide-up-enter-active {
+  transition: all 1s;
+}
+
+.slide-up-enter,
+.slide-up-leave-active {
+  transform: rotateY(90deg);
+  opacity: 0
+}
